@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resignation Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        td {
+            padding: 10px;
+            vertical-align: top;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="date"],
+        input[type="email"],
+        input[type="password"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        textarea {
+            resize: vertical;
+        }
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+            text-align: center;
+            margin-top: 10px;
+        }
+        .submit-btn:hover {
+            background-color: #c82333;
+        }
+        .checkbox-group,
+        .radio-group {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Resignation Form</h2>
+
+    <form action="/submit_resignation" method="post" enctype="multipart/form-data">
+        <table>
+            <tr>
+                <td><label for="employee_id">Employee ID:</label></td>
+                <td><input type="text" id="employee_id" name="employee_id" required></td>
+            </tr>
+            <tr>
+                <td><label for="employee_name">Employee Name:</label></td>
+                <td><input type="text" id="employee_name" name="employee_name" required></td>
+            </tr>
+            <tr>
+                <td><label for="position">Position:</label></td>
+                <td><input type="text" id="position" name="position" required></td>
+            </tr>
+            <tr>
+                <td><label for="department">Department:</label></td>
+                <td><input type="text" id="department" name="department" required></td>
+            </tr>
+            <tr>
+                <td><label for="manager_name">Manager's Name:</label></td>
+                <td><input type="text" id="manager_name" name="manager_name" required></td>
+            </tr>
+            <tr>
+                <td><label for="notice_period">Notice Period (in days):</label></td>
+                <td><input type="text" id="notice_period" name="notice_period" required></td>
+            </tr>
+            <tr>
+                <td><label for="resignation_reason">Reason for Resignation:</label></td>
+                <td><textarea id="resignation_reason" name="resignation_reason" rows="4" required></textarea></td>
+            </tr>
+            <tr>
+                <td><label for="hand_over_details">Hand-over Details:</label></td>
+                <td><textarea id="hand_over_details" name="hand_over_details" rows="4"></textarea></td>
+            </tr>
+            <tr>
+                <td><label for="last_working_day">Last Working Day:</label></td>
+                <td><input type="date" id="last_working_day" name="last_working_day" required></td>
+            </tr>
+            <tr>
+                <td><label for="email">Email Address:</label></td>
+                <td><input type="email" id="email" name="email" required></td>
+            </tr>
+            <tr>
+                <td><label for="phone">Phone Number:</label></td>
+                <td><input type="text" id="phone" name="phone"></td>
+            </tr>
+            <tr>
+                <td><label>Gender:</label></td>
+                <td>
+                    <div class="radio-group">
+                        <label><input type="radio" name="gender" value="male" required> Male</label><br>
+                        <label><input type="radio" name="gender" value="female"> Female</label><br>
+                        <label><input type="radio" name="gender" value="other"> Other</label>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td><label for="password">Password:</label></td>
+                <td><input type="password" id="password" name="password"></td>
+            </tr>
+            <tr>
+                <td><label for="resume">Upload Resume:</label></td>
+                <td><input type="file" id="resume" name="resume"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="Submit Resignation" class="submit-btn">
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+</body>
+</html>

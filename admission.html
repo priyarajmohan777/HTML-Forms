@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        td, th {
+            padding: 10px;
+        }
+        input[type="text"],
+        input[type="date"],
+        input[type="tel"],
+        input[type="email"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        textarea {
+            resize: vertical;
+        }
+        .submit-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+            text-align: center;
+        }
+        .submit-btn:hover {
+            background-color: #218838;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Admission Form</h2>
+
+    <form action="/submit_admission" method="post">
+        <table>
+            <!-- Student Information -->
+            <tr>
+                <td><label for="student_name">Student Name:</label></td>
+                <td><input type="text" id="student_name" name="student_name" required></td>
+            </tr>
+            <tr>
+                <td><label for="dob">Date of Birth:</label></td>
+                <td><input type="date" id="dob" name="dob" required></td>
+            </tr>
+            <tr>
+                <td><label for="gender">Gender:</label></td>
+                <td>
+                    <select id="gender" name="gender" required>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="course">Course:</label></td>
+                <td><input type="text" id="course" name="course" required></td>
+            </tr>
+            <tr>
+                <td><label for="address">Address:</label></td>
+                <td><textarea id="address" name="address" rows="4" required></textarea></td>
+            </tr>
+            <tr>
+                <td><label for="city">City:</label></td>
+                <td><input type="text" id="city" name="city" required></td>
+            </tr>
+            <tr>
+                <td><label for="state">State:</label></td>
+                <td><input type="text" id="state" name="state" required></td>
+            </tr>
+            <tr>
+                <td><label for="zip">Zip Code:</label></td>
+                <td><input type="text" id="zip" name="zip" required></td>
+            </tr>
+
+            <!-- Parent/Guardian Information -->
+            <tr>
+                <td><label for="guardian_name">Parent/Guardian Name:</label></td>
+                <td><input type="text" id="guardian_name" name="guardian_name" required></td>
+            </tr>
+            <tr>
+                <td><label for="guardian_contact">Contact Number:</label></td>
+                <td><input type="tel" id="guardian_contact" name="guardian_contact" required></td>
+            </tr>
+            <tr>
+                <td><label for="guardian_email">Email Address:</label></td>
+                <td><input type="email" id="guardian_email" name="guardian_email" required></td>
+            </tr>
+
+            <!-- Previous School Details -->
+            <tr>
+                <td><label for="previous_school">Previous School Name:</label></td>
+                <td><input type="text" id="previous_school" name="previous_school" required></td>
+            </tr>
+            <tr>
+                <td><label for="grade">Previous Grade:</label></td>
+                <td><input type="text" id="grade" name="grade" required></td>
+            </tr>
+
+            <!-- Emergency Contact -->
+            <tr>
+                <td><label for="emergency_contact">Emergency Contact Name:</label></td>
+                <td><input type="text" id="emergency_contact" name="emergency_contact" required></td>
+            </tr>
+            <tr>
+                <td><label for="emergency_phone">Emergency Contact Phone:</label></td>
+                <td><input type="tel" id="emergency_phone" name="emergency_phone" required></td>
+            </tr>
+
+            <!-- Health Information -->
+            <tr>
+                <td><label for="health_conditions">Health Conditions:</label></td>
+                <td><textarea id="health_conditions" name="health_conditions" rows="4"></textarea></td>
+            </tr>
+
+            <!-- Additional Information -->
+            <tr>
+                <td><label for="language">Languages Spoken:</label></td>
+                <td><input type="text" id="language" name="language"></td>
+            </tr>
+            <tr>
+                <td><label for="special_needs">Special Needs:</label></td>
+                <td><textarea id="special_needs" name="special_needs" rows="4"></textarea></td>
+            </tr>
+            <tr>
+                <td><label for="extracurricular_interests">Extracurricular Interests:</label></td>
+                <td><input type="text" id="extracurricular_interests" name="extracurricular_interests"></td>
+            </tr>
+            <tr>
+                <td><label for="reason">Reason for Choosing the School:</label></td>
+                <td><textarea id="reason" name="reason" rows="4"></textarea></td>
+            </tr>
+
+            <!-- Submit Button -->
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" value="Apply for Admission" class="submit-btn">
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+</body>
+</html>

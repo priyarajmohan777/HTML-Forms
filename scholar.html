@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scholarship Application Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        td {
+            padding: 10px;
+            vertical-align: top;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="date"],
+        input[type="tel"],
+        input[type="email"],
+        input[type="password"],
+        select,
+        textarea {
+            width: calc(100% - 20px);
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        textarea {
+            resize: vertical;
+        }
+        .checkbox-group,
+        .radio-group {
+            margin-bottom: 10px;
+        }
+        .checkbox-group input,
+        .radio-group input {
+            margin-right: 5px;
+        }
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color:cadetblue;
+            color: white;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+            text-align: center;
+            margin-top: 10px;
+        }
+        .submit-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Scholarship Application Form</h2>
+
+    <form action="/submit_scholarship_application" method="post" enctype="multipart/form-data">
+        <table>
+            <tr>
+                <td><label for="full_name">Full Name:</label></td>
+                <td><input type="text" id="full_name" name="full_name" required></td>
+            </tr>
+            <tr>
+                <td><label for="dob">Date of Birth:</label></td>
+                <td><input type="date" id="dob" name="dob" required></td>
+            </tr>
+            <tr>
+                <td><label for="gender">Gender:</label></td>
+                <td>
+                    <div class="radio-group">
+                        <label><input type="radio" name="gender" value="male" required> Male</label>
+                        <label><input type="radio" name="gender" value="female" required> Female</label>
+                        <label><input type="radio" name="gender" value="other" required> Other</label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="address">Address:</label></td>
+                <td><input type="text" id="address" name="address" required></td>
+            </tr>
+            <tr>
+                <td><label for="city">City:</label></td>
+                <td><input type="text" id="city" name="city" required></td>
+            </tr>
+            <tr>
+                <td><label for="state">State:</label></td>
+                <td><input type="text" id="state" name="state" required></td>
+            </tr>
+            <tr>
+                <td><label for="zip">Zip Code:</label></td>
+                <td><input type="text" id="zip" name="zip" required></td>
+            </tr>
+            <tr>
+                <td><label for="phone">Phone Number:</label></td>
+                <td><input type="tel" id="phone" name="phone" required></td>
+            </tr>
+            <tr>
+                <td><label for="email">Email Address:</label></td>
+                <td><input type="email" id="email" name="email" required></td>
+            </tr>
+            <tr>
+                <td><label for="password">Password:</label></td>
+                <td><input type="password" id="password" name="password" required></td>
+            </tr>
+            <tr>
+                <td><label for="institution">Educational Institution:</label></td>
+                <td><input type="text" id="institution" name="institution" required></td>
+            </tr>
+            <tr>
+                <td><label for="course">Course/Program:</label></td>
+                <td><input type="text" id="course" name="course" required></td>
+            </tr>
+            <tr>
+                <td><label for="grade">Current Grade/Year:</label></td>
+                <td><input type="text" id="grade" name="grade" required></td>
+            </tr>
+            <tr>
+                <td><label for="scholarship_type">Scholarship Type Applying For:</label></td>
+                <td>
+                    <select id="scholarship_type" name="scholarship_type" required>
+                        <option value="">Select Scholarship Type</option>
+                        <option value="merit">Merit-Based</option>
+                        <option value="need">Need-Based</option>
+                        <option value="athletic">Athletic</option>
+                        <option value="other">Other</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="statement_of_purpose">Statement of Purpose:</label></td>
+                <td><textarea id="statement_of_purpose" name="statement_of_purpose" rows="4" required></textarea></td>
+            </tr>
+            <tr>
+                <td><label for="terms">Agree to Terms and Conditions:</label></td>
+                <td>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" id="terms" name="terms" required> I agree</label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="resume">Upload Resume:</label></td>
+                <td><input type="file" id="resume" name="resume" accept=".pdf, .doc, .docx" required></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="Submit Application" class="submit-btn">
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+</body>
+</html>

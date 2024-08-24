@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rental Agreement Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        td {
+            padding: 10px;
+            vertical-align: top;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="date"],
+        input[type="tel"],
+        input[type="email"],
+        input[type="number"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        textarea {
+            height: 80px;
+            resize: vertical;
+        }
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .submit-btn:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Rental Agreement Form</h2>
+
+    <form action="/submit_rental_agreement" method="post">
+        <table>
+            <tr>
+                <td><label for="landlord_name">Landlord Full Name:</label></td>
+                <td><input type="text" id="landlord_name" name="landlord_name" required></td>
+            </tr>
+            <tr>
+                <td><label for="landlord_address">Landlord Address:</label></td>
+                <td><input type="text" id="landlord_address" name="landlord_address" required></td>
+            </tr>
+            <tr>
+                <td><label for="landlord_phone">Landlord Phone Number:</label></td>
+                <td><input type="tel" id="landlord_phone" name="landlord_phone" required></td>
+            </tr>
+            <tr>
+                <td><label for="landlord_email">Landlord Email Address:</label></td>
+                <td><input type="email" id="landlord_email" name="landlord_email" required></td>
+            </tr>
+            <tr>
+                <td><label for="tenant_name">Tenant Full Name:</label></td>
+                <td><input type="text" id="tenant_name" name="tenant_name" required></td>
+            </tr>
+            <tr>
+                <td><label for="tenant_address">Tenant Address:</label></td>
+                <td><input type="text" id="tenant_address" name="tenant_address" required></td>
+            </tr>
+            <tr>
+                <td><label for="tenant_phone">Tenant Phone Number:</label></td>
+                <td><input type="tel" id="tenant_phone" name="tenant_phone" required></td>
+            </tr>
+            <tr>
+                <td><label for="tenant_email">Tenant Email Address:</label></td>
+                <td><input type="email" id="tenant_email" name="tenant_email" required></td>
+            </tr>
+            <tr>
+                <td><label for="tenant_id">Identification Proof:</label></td>
+                <td><input type="text" id="tenant_id" name="tenant_id" required></td>
+            </tr>
+            <tr>
+                <td><label for="property_address">Property Address:</label></td>
+                <td><input type="text" id="property_address" name="property_address" required></td>
+            </tr>
+            <tr>
+                <td><label for="property_type">Type of Property:</label></td>
+                <td>
+                    <select id="property_type" name="property_type" required>
+                        <option value="">Select Property Type</option>
+                        <option value="apartment">Apartment</option>
+                        <option value="house">House</option>
+                        <option value="studio">Studio</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="bedrooms">Number of Bedrooms:</label></td>
+                <td><input type="number" id="bedrooms" name="bedrooms" required></td>
+            </tr>
+            <tr>
+                <td><label for="bathrooms">Number of Bathrooms:</label></td>
+                <td><input type="number" id="bathrooms" name="bathrooms" required></td>
+            </tr>
+            <tr>
+                <td><label for="lease_start_date">Lease Start Date:</label></td>
+                <td><input type="date" id="lease_start_date" name="lease_start_date" required></td>
+            </tr>
+            <tr>
+                <td><label for="lease_end_date">Lease End Date:</label></td>
+                <td><input type="date" id="lease_end_date" name="lease_end_date" required></td>
+            </tr>
+            <tr>
+                <td><label for="monthly_rent">Monthly Rent Amount:</label></td>
+                <td><input type="number" id="monthly_rent" name="monthly_rent" step="0.01" required></td>
+            </tr>
+            <tr>
+                <td><label for="security_deposit">Security Deposit Amount:</label></td>
+                <td><input type="number" id="security_deposit" name="security_deposit" step="0.01" required></td>
+            </tr>
+            <tr>
+                <td><label for="payment_due_date">Payment Due Date:</label></td>
+                <td><input type="date" id="payment_due_date" name="payment_due_date" required></td>
+            </tr>
+            <tr>
+                <td><label for="utilities_included">Utilities Included:</label></td>
+                <td><textarea id="utilities_included" name="utilities_included"></textarea></td>
+            </tr>
+            <tr>
+                <td><label for="maintenance_responsibilities">Maintenance Responsibilities:</label></td>
+                <td><textarea id="maintenance_responsibilities" name="maintenance_responsibilities"></textarea></td>
+            </tr>
+            <tr>
+                <td><label for="pet_policy">Pet Policy:</label></td>
+                <td><textarea id="pet_policy" name="pet_policy"></textarea></td>
+            </tr>
+            <tr>
+                <td><label for="rules_regulations">Rules and Regulations:</label></td>
+                <td><textarea id="rules_regulations" name="rules_regulations"></textarea></td>
+            </tr>
+            <tr>
+                <td><label for="termination_notice">Termination Notice Period:</label></td>
+                <td><input type="text" id="termination_notice" name="termination_notice" required></td>
+            </tr>
+            <tr>
+                <td><label for="landlord_signature">Landlord Signature:</label></td>
+                <td><input type="text" id="landlord_signature" name="landlord_signature" required></td>
+            </tr>
+            <tr>
+                <td><label for="tenant_signature">Tenant Signature:</label></td>
+                <td><input type="text" id="tenant_signature" name="tenant_signature" required></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="Submit Rental Agreement" class="submit-btn">
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+</body>
+</html>

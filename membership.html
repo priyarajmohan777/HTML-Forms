@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Membership Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        td {
+            padding: 8px;
+            vertical-align: top;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="date"],
+        input[type="tel"],
+        input[type="email"],
+        input[type="password"],
+        textarea,
+        select,
+        input[type="file"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        textarea {
+            resize: vertical;
+        }
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color:indianred;
+            color: white;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+            text-align: center;
+            margin-top: 10px;
+        }
+        .submit-btn:hover {
+            background-color: #0056b3;
+        }
+        .form-row {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Library Membership Form</h2>
+
+    <form action="/submit_membership" method="post" enctype="multipart/form-data">
+        <!-- Full Name -->
+        <div class="form-row">
+            <label for="full_name">Full Name:</label>
+            <input type="text" id="full_name" name="full_name" required>
+        </div>
+
+        <!-- Date of Birth -->
+        <div class="form-row">
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+        </div>
+
+        <!-- Membership Type -->
+        <div class="form-row">
+            <label for="membership_type">Membership Type:</label>
+            <input type="text" id="membership_type" name="membership_type" required>
+        </div>
+
+        <!-- Phone Number -->
+        <div class="form-row">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+        </div>
+
+        <!-- Email -->
+        <div class="form-row">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <!-- Password -->
+        <div class="form-row">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+
+        <!-- Address -->
+        <div class="form-row">
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required>
+        </div>
+
+        <!-- City -->
+        <div class="form-row">
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" required>
+        </div>
+
+        <!-- State -->
+        <div class="form-row">
+            <label for="state">State:</label>
+            <input type="text" id="state" name="state" required>
+        </div>
+
+        <!-- Zip Code -->
+        <div class="form-row">
+            <label for="zip">Zip Code:</label>
+            <input type="text" id="zip" name="zip" required>
+        </div>
+
+        <!-- Library Card Number -->
+        <div class="form-row">
+            <label for="library_card_number">Library Card Number:</label>
+            <input type="text" id="library_card_number" name="library_card_number">
+        </div>
+
+        <!-- Preferred Branch -->
+        <div class="form-row">
+            <label for="preferred_branch">Preferred Branch:</label>
+            <select id="preferred_branch" name="preferred_branch">
+                <option value="main">Main Library</option>
+                <option value="north">North Branch</option>
+                <option value="south">South Branch</option>
+                <option value="east">East Branch</option>
+                <option value="west">West Branch</option>
+            </select>
+        </div>
+
+        <!-- Occupation -->
+        <div class="form-row">
+            <label for="occupation">Occupation:</label>
+            <input type="text" id="occupation" name="occupation">
+        </div>
+
+        <!-- Emergency Contact Name -->
+        <div class="form-row">
+            <label for="emergency_contact_name">Emergency Contact Name:</label>
+            <input type="text" id="emergency_contact_name" name="emergency_contact_name">
+        </div>
+
+        <!-- Emergency Contact Phone -->
+        <div class="form-row">
+            <label for="emergency_contact_phone">Emergency Contact Phone:</label>
+            <input type="tel" id="emergency_contact_phone" name="emergency_contact_phone">
+        </div>
+
+        <!-- How Did You Hear About Us? -->
+        <div class="form-row">
+            <label for="how_did_you_hear">How Did You Hear About Us?</label>
+            <select id="how_did_you_hear" name="how_did_you_hear">
+                <option value="website">Website</option>
+                <option value="social_media">Social Media</option>
+                <option value="friend">Friend/Family</option>
+                <option value="advertisement">Advertisement</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+
+        <!-- Preferred Genres -->
+        <div class="form-row">
+            <label for="preferred_genres">Preferred Genres:</label>
+            <input type="text" id="preferred_genres" name="preferred_genres">
+        </div>
+
+        <!-- Special Requirements/Notes -->
+        <div class="form-row">
+            <label for="special_requirements">Special Requirements/Notes:</label>
+            <textarea id="special_requirements" name="special_requirements" rows="4"></textarea>
+        </div>
+
+        <!-- Gender -->
+        <div class="form-row">
+            <label>Gender:</label>
+            <label><input type="radio" name="gender" value="male"> Male</label>
+            <label><input type="radio" name="gender" value="female"> Female</label>
+            <label><input type="radio" name="gender" value="other"> Other</label>
+        </div>
+
+        <!-- Newsletter Subscription -->
+        <div class="form-row">
+            <label><input type="checkbox" name="newsletter" value="subscribe"> Subscribe to Newsletter</label>
+        </div>
+
+        <!-- File Upload -->
+        <div class="form-row">
+            <label for="profile_picture">Profile Picture:</label>
+            <input type="file" id="profile_picture" name="profile_picture">
+        </div>
+
+        <!-- Submit Button -->
+        <div class="form-row">
+            <input type="submit" value="Apply for Membership" class="submit-btn">
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

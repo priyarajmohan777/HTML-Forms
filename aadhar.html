@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aadhar Application Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        td {
+            padding: 10px;
+            vertical-align: top;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="date"],
+        input[type="tel"],
+        input[type="email"],
+        input[type="password"],
+        select,
+        input[type="file"] {
+            width: calc(100% - 20px);
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        textarea {
+            width: calc(100% - 20px);
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            resize: vertical;
+        }
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+            text-align: center;
+            margin-top: 10px;
+        }
+        .submit-btn:hover {
+            background-color: #0056b3;
+        }
+        .form-row {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Aadhar Application Form</h2>
+
+    <form action="/submit_aadhar_application" method="post" enctype="multipart/form-data">
+        <!-- Full Name -->
+        <div class="form-row">
+            <label for="full_name">Full Name:</label>
+            <input type="text" id="full_name" name="full_name" required>
+        </div>
+
+        <!-- Date of Birth -->
+        <div class="form-row">
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+        </div>
+
+        <!-- Gender -->
+        <div class="form-row">
+            <label>Gender:</label>
+            <label><input type="radio" name="gender" value="male" required> Male</label>
+            <label><input type="radio" name="gender" value="female"> Female</label>
+            <label><input type="radio" name="gender" value="other"> Other</label>
+        </div>
+
+        <!-- Address -->
+        <div class="form-row">
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required>
+        </div>
+
+        <!-- City -->
+        <div class="form-row">
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" required>
+        </div>
+
+        <!-- State -->
+        <div class="form-row">
+            <label for="state">State:</label>
+            <input type="text" id="state" name="state" required>
+        </div>
+
+        <!-- Zip Code -->
+        <div class="form-row">
+            <label for="zip">Zip Code:</label>
+            <input type="text" id="zip" name="zip" required>
+        </div>
+
+        <!-- Phone Number -->
+        <div class="form-row">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+        </div>
+
+        <!-- Email Address -->
+        <div class="form-row">
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email">
+        </div>
+
+        <!-- Password -->
+        <div class="form-row">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+
+        <!-- Proof of Identity -->
+        <div class="form-row">
+            <label for="proof_of_identity">Proof of Identity:</label>
+            <input type="text" id="proof_of_identity" name="proof_of_identity" required>
+        </div>
+
+        <!-- Proof of Address -->
+        <div class="form-row">
+            <label for="proof_of_address">Proof of Address:</label>
+            <input type="text" id="proof_of_address" name="proof_of_address" required>
+        </div>
+
+        <!-- File Upload -->
+        <div class="form-row">
+            <label for="file_upload">Upload Documents:</label>
+            <input type="file" id="file_upload" name="file_upload">
+        </div>
+
+        <!-- Subscribe to Newsletter -->
+        <div class="form-row">
+            <label><input type="checkbox" name="newsletter" value="subscribe"> Subscribe to Newsletter</label>
+        </div>
+
+        <!-- Comments -->
+        <div class="form-row">
+            <label for="comments">Additional Comments:</label>
+            <textarea id="comments" name="comments" rows="4"></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="form-row">
+            <input type="submit" value="Submit Application" class="submit-btn">
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
